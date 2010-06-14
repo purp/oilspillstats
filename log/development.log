@@ -5354,3 +5354,882 @@ ActionController::RoutingError (No route matches "/timeline/__history__.html" wi
 Rendering rescues/layout (not_found)
   [4;35;1mSource Load (0.4ms)[0m   [0mSELECT * FROM `sources` LIMIT 1[0m
   [4;36;1mSource Load (0.5ms)[0m   [0;1mSELECT * FROM `sources` WHERE (`sources`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TimelinesController#timeline (for 127.0.0.1 at 2010-06-14 10:35:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTimeline Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `timelines`[0m
+  [4;35;1mTimeline Load (0.3ms)[0m   [0mSELECT * FROM `timelines` WHERE (`timelines`.`id` = 1) [0m
+Rendering template within layouts/timelines
+Rendering timelines/timeline
+  [4;36;1mSource Load (0.4ms)[0m   [0;1mSELECT * FROM `sources` WHERE (`sources`.timeline_id = 1) LIMIT 1[0m
+  [4;35;1mSource Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `sources`[0m
+  [4;36;1mTimelineEvent Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `timeline_events`[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539371/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539391/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536519/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.1ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539303/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.1ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539127/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/538223/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/537663/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/537631/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536755/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536747/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (2.0ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/620739/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (1.9ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/620599/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/620423/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/602239/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/601171/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/601523/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/601411/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/599235/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/598971/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/598083/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/542439/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/541699/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/541659/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/540839/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/541091/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/540791/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/540207/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539971/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539823/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539675/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/627011/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/624543/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/624151/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/623487/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/623411/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/623251/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/622875/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (4.0ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/621375/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/621251/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/620939/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/547575/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/546651/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/544979/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/544175/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/543295/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/543307/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/542947/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/542923/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/542891/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/542867/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/652759/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/652927/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (1.1ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/652827/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/651535/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/650739/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (5.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/650483/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/650419/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/650199/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/627351/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/627127/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.9ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/657231/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.8ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/656543/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/655843/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/654303/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/654667/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/654195/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/653715/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/653739/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/653339/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/653207/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/551271/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/551203/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/550055/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/548995/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/548987/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/548791/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/548719/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/548547/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/548571/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/547683/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/556335/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/555703/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/554455/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/554271/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/553155/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/552671/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/552115/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/551935/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/551775/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/551367/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/565739/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/565555/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/565635/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/565491/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/565219/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/562879/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/562571/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/561839/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/561511/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/560455/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/560235/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/559647/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/559595/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/559583/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/558807/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/558871/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/557631/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/557235/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/557175/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/557167/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/573083/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/572127/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/569235/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/571367/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/569207/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/568399/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/568303/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/567027/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/566759/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/566143/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.8ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/576767/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/576331/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/576299/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/576255/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/575903/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/574403/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/574199/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/573743/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/573251/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/573235/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/585863/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/585915/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/581459/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/584051/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/581707/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/582155/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/578227/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/578235/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/577951/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/576995/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (2.1ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/529883/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/529595/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/529003/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/525675/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/525683/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/528479/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/525671/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/525807/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/525679/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/590331/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/590891/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/590295/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/589567/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/588999/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/589083/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/588695/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/587847/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/587523/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/587499/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535351/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535187/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535139/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535131/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535027/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (1.1ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/532827/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (2.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/531367/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.9ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/530631/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.8ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/530491/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.9ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/530383/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/599095/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (1.1ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/594955/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (1.1ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/594843/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.8ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/593623/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.8ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/593479/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.9ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/593199/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.8ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/591947/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.8ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/591875/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.8ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/591763/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (1.0ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/591247/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536727/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536691/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536715/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (1.0ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536699/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.8ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536683/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535763/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (1.1ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535447/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.8ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535679/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535355/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535335/') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSource Update (0.2ms)[0m   [0mUPDATE `sources` SET `updated_at` = '2010-06-14 17:35:31' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTimelineEvent Load (1.1ms)[0m   [0mSELECT `timeline_events`.* FROM `timeline_events` INNER JOIN `sources` ON `timeline_events`.source_id = `sources`.id WHERE ((`sources`.timeline_id = 1)) [0m
+Completed in 9835ms (View: 9708, DB: 119) | 200 OK [http://localhost/timeline/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-14 10:35:32) [GET]
+
+ActionController::RoutingError (No route matches "/timeline/local_example.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TimelinesController#timeline (for 127.0.0.1 at 2010-06-14 10:35:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTimeline Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `timelines`[0m
+  [4;35;1mTimeline Load (5.1ms)[0m   [0mSELECT * FROM `timelines` WHERE (`timelines`.`id` = 1) [0m
+Rendering template within layouts/timelines
+Rendering timelines/timeline
+  [4;36;1mSource Load (0.3ms)[0m   [0;1mSELECT * FROM `sources` WHERE (`sources`.timeline_id = 1) LIMIT 1[0m
+  [4;35;1mSource Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `sources`[0m
+  [4;36;1mTimelineEvent Load (1.5ms)[0m   [0;1mSELECT `timeline_events`.* FROM `timeline_events` INNER JOIN `sources` ON `timeline_events`.source_id = `sources`.id WHERE ((`sources`.timeline_id = 1)) [0m
+  [4;35;1mTimelineEvent Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `timeline_events`[0m
+Completed in 181ms (View: 165, DB: 10) | 200 OK [http://localhost/timeline/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-14 10:35:45) [GET]
+
+ActionController::RoutingError (No route matches "/timeline/local_example.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TimelinesController#timeline (for 127.0.0.1 at 2010-06-14 10:35:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTimeline Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `timelines`[0m
+  [4;35;1mTimeline Load (0.5ms)[0m   [0mSELECT * FROM `timelines` WHERE (`timelines`.`id` = 1) [0m
+Rendering template within layouts/timelines
+Rendering timelines/timeline
+  [4;36;1mSource Load (0.3ms)[0m   [0;1mSELECT * FROM `sources` WHERE (`sources`.timeline_id = 1) LIMIT 1[0m
+  [4;35;1mSource Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `sources`[0m
+  [4;36;1mTimelineEvent Load (1.3ms)[0m   [0;1mSELECT `timeline_events`.* FROM `timeline_events` INNER JOIN `sources` ON `timeline_events`.source_id = `sources`.id WHERE ((`sources`.timeline_id = 1)) [0m
+  [4;35;1mTimelineEvent Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `timeline_events`[0m
+Completed in 160ms (View: 146, DB: 7) | 200 OK [http://localhost/timeline/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-14 10:35:55) [GET]
+
+ActionController::RoutingError (No route matches "/timeline/local_example.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TimelinesController#timeline (for 127.0.0.1 at 2010-06-14 10:36:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTimeline Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `timelines`[0m
+  [4;35;1mTimeline Load (0.2ms)[0m   [0mSELECT * FROM `timelines` WHERE (`timelines`.`id` = 1) [0m
+Rendering template within layouts/timelines
+Rendering timelines/timeline
+  [4;36;1mSource Load (0.5ms)[0m   [0;1mSELECT * FROM `sources` WHERE (`sources`.timeline_id = 1) LIMIT 1[0m
+  [4;35;1mSource Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `sources`[0m
+  [4;36;1mTimelineEvent Load (1.4ms)[0m   [0;1mSELECT `timeline_events`.* FROM `timeline_events` INNER JOIN `sources` ON `timeline_events`.source_id = `sources`.id WHERE ((`sources`.timeline_id = 1)) [0m
+  [4;35;1mTimelineEvent Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `timeline_events`[0m
+Completed in 174ms (View: 161, DB: 6) | 200 OK [http://localhost/timeline/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-14 10:36:45) [GET]
+
+ActionController::RoutingError (No route matches "/timeline/local_example.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-14 10:36:46) [GET]
+  Parameters: {"0"=>nil}
+
+ActionController::RoutingError (No route matches "/timeline/__history__.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TimelinesController#timeline (for 127.0.0.1 at 2010-06-14 10:37:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTimeline Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `timelines`[0m
+  [4;35;1mTimeline Load (0.8ms)[0m   [0mSELECT * FROM `timelines` WHERE (`timelines`.`id` = 1) [0m
+Rendering template within layouts/timelines
+Rendering timelines/timeline
+  [4;36;1mSource Load (2.0ms)[0m   [0;1mSELECT * FROM `sources` WHERE (`sources`.timeline_id = 1) LIMIT 1[0m
+  [4;35;1mSource Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `sources`[0m
+  [4;36;1mTimelineEvent Load (1.2ms)[0m   [0;1mSELECT `timeline_events`.* FROM `timeline_events` INNER JOIN `sources` ON `timeline_events`.source_id = `sources`.id WHERE ((`sources`.timeline_id = 1)) [0m
+  [4;35;1mTimelineEvent Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `timeline_events`[0m
+Completed in 191ms (View: 177, DB: 9) | 200 OK [http://localhost/timeline/1]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-14 10:37:17) [GET]
+
+ActionController::RoutingError (No route matches "/timeline/local_example.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-14 10:37:18) [GET]
+  Parameters: {"0"=>nil}
+
+ActionController::RoutingError (No route matches "/timeline/__history__.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TimelinesController#timeline (for 127.0.0.1 at 2010-06-14 10:38:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTimeline Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `timelines`[0m
+  [4;35;1mTimeline Load (0.2ms)[0m   [0mSELECT * FROM `timelines` WHERE (`timelines`.`id` = 1) [0m
+Rendering template within layouts/timelines
+Rendering timelines/timeline
+  [4;36;1mSource Load (0.4ms)[0m   [0;1mSELECT * FROM `sources` WHERE (`sources`.timeline_id = 1) LIMIT 1[0m
+  [4;35;1mSource Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `sources`[0m
+  [4;36;1mTimelineEvent Load (1.3ms)[0m   [0;1mSELECT `timeline_events`.* FROM `timeline_events` INNER JOIN `sources` ON `timeline_events`.source_id = `sources`.id WHERE ((`sources`.timeline_id = 1)) [0m
+  [4;35;1mTimelineEvent Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `timeline_events`[0m
+Completed in 178ms (View: 167, DB: 6) | 200 OK [http://localhost/timeline/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-14 10:38:02) [GET]
+
+ActionController::RoutingError (No route matches "/timeline/local_example.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-14 10:38:03) [GET]
+  Parameters: {"0"=>nil}
+
+ActionController::RoutingError (No route matches "/timeline/__history__.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TimelinesController#timeline (for 127.0.0.1 at 2010-06-14 10:42:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTimeline Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `timelines`[0m
+  [4;35;1mTimeline Load (2.0ms)[0m   [0mSELECT * FROM `timelines` WHERE (`timelines`.`id` = 1) [0m
+  [4;36;1mSource Load (0.5ms)[0m   [0;1mSELECT * FROM `sources` WHERE (`sources`.timeline_id = 1) LIMIT 1[0m
+  [4;35;1mSource Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `sources`[0m
+Rendering template within layouts/timelines
+Rendering timelines/timeline
+  [4;36;1mTimelineEvent Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `timeline_events`[0m
+  [4;35;1mTimelineEvent Load (2.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539371/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539391/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536519/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539303/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539127/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/538223/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/537663/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/537631/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536755/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536747/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/620739/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/620599/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/620423/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/602239/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/601171/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/601523/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/601411/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/599235/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/598971/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/598083/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/542439/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/541699/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/541659/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/540839/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/541091/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/540791/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/540207/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539971/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539823/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539675/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/627011/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.9ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/624543/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/624151/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/623487/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/623411/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/623251/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/622875/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/621375/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/621251/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (1.1ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/620939/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/547575/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/546651/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/544979/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/544175/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/543295/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/543307/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/542947/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/542923/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/542891/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/542867/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/652759/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/652927/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/652827/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/651535/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/650739/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/650483/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/650419/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/650199/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/627351/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/627127/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (1.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/657231/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (1.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/656543/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/655843/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/654303/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/654667/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/654195/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/653715/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/653739/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/653339/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/653207/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/551271/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/551203/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/550055/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/548995/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/548987/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/548791/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/548719/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/548547/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/548571/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/547683/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/556335/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/555703/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/554455/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/554271/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/553155/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/552671/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/552115/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/551935/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (1.9ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/551775/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/551367/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/565739/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.9ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/565555/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/565635/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/565491/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/565219/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/562879/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/562571/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/561839/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/561511/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/560455/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/560235/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/559647/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/559595/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/559583/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/558807/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/558871/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/557631/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/557235/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/557175/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/557167/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/573083/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/572127/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/569235/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/571367/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/569207/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/568399/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/568303/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/567027/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/566759/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/566143/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/576767/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/576331/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/576299/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/576255/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/575903/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/574403/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/574199/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/573743/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/573251/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/573235/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.8ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/585863/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/585915/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/581459/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/584051/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/581707/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/582155/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/578227/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/578235/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/577951/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/576995/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/529883/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/529595/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/529003/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/525675/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/525683/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/528479/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/525671/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/525807/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/525679/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/590331/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/590891/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/590295/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/589567/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/588999/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/589083/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/588695/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/587847/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.8ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/587523/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/587499/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535351/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535187/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535139/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535131/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535027/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/532827/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/531367/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/530631/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/530491/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/530383/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/599095/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/594955/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.8ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/594843/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.8ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/593623/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/593479/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/593199/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.9ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/591947/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/591875/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/591763/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/591247/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536727/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536691/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536715/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536699/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536683/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535763/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535447/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535679/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535355/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535335/') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSource Update (0.2ms)[0m   [0mUPDATE `sources` SET `updated_at` = '2010-06-14 17:42:33' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mTimelineEvent Load (1.2ms)[0m   [0mSELECT `timeline_events`.* FROM `timeline_events` INNER JOIN `sources` ON `timeline_events`.source_id = `sources`.id WHERE ((`sources`.timeline_id = 1)) [0m
+  [4;36;1mTimelineEvent Load (1.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.source_id = 1) [0m
+
+ActionView::TemplateError (wrong number of arguments (1 for 0)) on line #30 of app/views/timelines/timeline.html.erb:
+27:             detailed_theme.autoWidth = true; // Set the Timeline's "width" automatically.
+28:                                      // Set autoWidth on the Timeline's first band's theme,
+29:                                      // will affect all bands.
+30:             detailed_theme.timeline_start = Timeline.DateTime.parseGregorianDateTime("<%= @source.earliest_event.start.to_s %>");
+31:             detailed_theme.timeline_stop  = Timeline.DateTime.parseGregorianDateTime("<%= 1.week.from_now.to_s %>");
+32:             
+33:             var overview_theme = Timeline.ClassicTheme.create();
+
+    app/models/source.rb:42:in `earliest_event'
+    app/views/timelines/timeline.html.erb:30
+    app/controllers/timelines_controller.rb:91:in `timeline'
+
+Rendered rescues/_trace (118.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mTimeline Load (0.3ms)[0m   [0;1mSELECT * FROM `timelines` LIMIT 1[0m
+  [4;35;1mTimeline Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `timelines`[0m
+  [4;36;1mSource Load (0.3ms)[0m   [0;1mSELECT * FROM `sources` WHERE (`sources`.timeline_id = 1) LIMIT 1[0m
+  [4;35;1mSource Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `sources`[0m
+  [4;36;1mTimelineEvent Load (1.9ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.source_id = 1) [0m
+  [4;35;1mTimelineEvent Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `timeline_events`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSource Load (0.5ms)[0m   [0;1mSELECT * FROM `sources` LIMIT 1[0m
+  [4;35;1mSource Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `sources`[0m
+  [4;36;1mTimelineEvent Load (2.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.source_id = 1) [0m
+  [4;35;1mTimelineEvent Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `timeline_events`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TimelinesController#timeline (for 127.0.0.1 at 2010-06-14 10:47:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTimeline Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `timelines`[0m
+  [4;36;1mTimeline Load (0.3ms)[0m   [0;1mSELECT * FROM `timelines` WHERE (`timelines`.`id` = 1) [0m
+  [4;35;1mSource Load (0.3ms)[0m   [0mSELECT * FROM `sources` WHERE (`sources`.timeline_id = 1) LIMIT 1[0m
+  [4;36;1mSource Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `sources`[0m
+Rendering template within layouts/timelines
+Rendering timelines/timeline
+  [4;35;1mTimelineEvent Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `timeline_events`[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539371/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539391/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536519/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539303/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539127/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/538223/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/537663/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/537631/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536755/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536747/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.9ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/620739/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/620599/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/620423/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/602239/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/601171/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/601523/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/601411/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/599235/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/598971/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/598083/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/542439/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/541699/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/541659/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/540839/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/541091/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/540791/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/540207/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539971/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539823/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/539675/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/627011/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/624543/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/624151/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/623487/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/623411/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/623251/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/622875/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/621375/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/621251/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/620939/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/547575/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/546651/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/544979/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/544175/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/543295/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/543307/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/542947/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/542923/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/542891/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/542867/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/652759/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/652927/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/652827/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/651535/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/650739/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/650483/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/650419/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/650199/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/627351/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/627127/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.8ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/657231/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.8ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/656543/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/655843/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/654303/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/654667/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/654195/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/653715/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.8ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/653739/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/653339/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/653207/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/551271/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/551203/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/550055/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/548995/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/548987/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/548791/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/548719/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/548547/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/548571/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/547683/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/556335/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/555703/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/554455/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/554271/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/553155/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/552671/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/552115/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/551935/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/551775/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/551367/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/565739/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/565555/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/565635/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/565491/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/565219/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/562879/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/562571/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/561839/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/561511/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/560455/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/560235/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/559647/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/559595/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/559583/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/558807/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.4ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/558871/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/557631/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/557235/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/557175/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/557167/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/573083/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/572127/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/569235/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/571367/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/569207/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/568399/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/568303/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/567027/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/566759/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/566143/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/576767/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/576331/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/576299/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/576255/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/575903/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/574403/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.9ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/574199/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/573743/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/573251/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/573235/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/585863/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/585915/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/581459/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/584051/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/581707/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/582155/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/578227/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.5ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/578235/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.5ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/577951/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/576995/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/529883/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/529595/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/529003/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/525675/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/525683/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/528479/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/525671/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/525807/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/525679/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.8ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/590331/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/590891/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/590295/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/589567/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/588999/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/589083/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.8ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/588695/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/587847/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/587523/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/587499/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535351/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535187/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.8ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535139/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.8ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535131/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535027/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/532827/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/531367/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/530631/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.6ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/530491/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.6ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/530383/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/599095/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/594955/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (1.0ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/594843/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.8ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/593623/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.9ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/593479/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/593199/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/591947/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/591875/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/591763/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/591247/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.2ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536727/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536691/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536715/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536699/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/536683/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535763/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535447/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535679/') LIMIT 1[0m
+  [4;35;1mTimelineEvent Load (0.7ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535355/') LIMIT 1[0m
+  [4;36;1mTimelineEvent Load (0.7ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.`link` = 'http://www.deepwaterhorizonresponse.com//go/doc/2931/535335/') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSource Update (0.2ms)[0m   [0;1mUPDATE `sources` SET `updated_at` = '2010-06-14 17:47:56' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mTimelineEvent Load (1.1ms)[0m   [0;1mSELECT `timeline_events`.* FROM `timeline_events` INNER JOIN `sources` ON `timeline_events`.source_id = `sources`.id WHERE ((`sources`.timeline_id = 1)) [0m
+  [4;35;1mTimelineEvent Load (1.3ms)[0m   [0mSELECT * FROM `timeline_events` WHERE (`timeline_events`.source_id = 1) [0m
+Completed in 8655ms (View: 8544, DB: 99) | 200 OK [http://localhost/timeline/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-14 10:47:56) [GET]
+
+ActionController::RoutingError (No route matches "/timeline/local_example.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-14 10:47:57) [GET]
+  Parameters: {"0"=>nil}
+
+ActionController::RoutingError (No route matches "/timeline/__history__.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TimelinesController#timeline (for 127.0.0.1 at 2010-06-14 10:49:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTimeline Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `timelines`[0m
+  [4;35;1mTimeline Load (0.2ms)[0m   [0mSELECT * FROM `timelines` WHERE (`timelines`.`id` = 1) [0m
+  [4;36;1mSource Load (0.3ms)[0m   [0;1mSELECT * FROM `sources` WHERE (`sources`.timeline_id = 1) LIMIT 1[0m
+  [4;35;1mSource Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `sources`[0m
+Rendering template within layouts/timelines
+Rendering timelines/timeline
+  [4;36;1mTimelineEvent Load (1.5ms)[0m   [0;1mSELECT `timeline_events`.* FROM `timeline_events` INNER JOIN `sources` ON `timeline_events`.source_id = `sources`.id WHERE ((`sources`.timeline_id = 1)) [0m
+  [4;35;1mTimelineEvent Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `timeline_events`[0m
+  [4;36;1mTimelineEvent Load (1.2ms)[0m   [0;1mSELECT * FROM `timeline_events` WHERE (`timeline_events`.source_id = 1) [0m
+Completed in 137ms (View: 120, DB: 7) | 200 OK [http://localhost/timeline/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-14 10:49:31) [GET]
+
+ActionController::RoutingError (No route matches "/timeline/local_example.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-14 10:49:32) [GET]
+  Parameters: {"0"=>nil}
+
+ActionController::RoutingError (No route matches "/timeline/__history__.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

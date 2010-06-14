@@ -39,11 +39,11 @@ class Source < ActiveRecord::Base
   end
   
   def earliest_event
-    timeline_events.select(:order => 'start ASC', :limit => 1).first
+    timeline_events.sort {|a,b| a.start <=> b.start}.first
   end
   
   def latest_event
-    timeline_events.select(:order => 'start DESC', :limit => 1).first
+    timeline_events.sort {|a,b| b.start <=> a.start}.first
   end
   
   def get_source_urls_from_top_page

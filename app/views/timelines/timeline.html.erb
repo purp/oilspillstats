@@ -23,19 +23,25 @@
             var tl_el = document.getElementById("tl");
             var eventSource1 = new Timeline.DefaultEventSource();
             
-            var theme1 = Timeline.ClassicTheme.create();
-            theme1.autoWidth = true; // Set the Timeline's "width" automatically.
+            var detailed_theme = Timeline.ClassicTheme.create();
+            detailed_theme.autoWidth = true; // Set the Timeline's "width" automatically.
                                      // Set autoWidth on the Timeline's first band's theme,
                                      // will affect all bands.
-            theme1.timeline_start = new Date(Date.UTC(2010, 3, 1));
-            theme1.timeline_stop  = new Date(Date.UTC(2012, 0, 1));
+            detailed_theme.timeline_start = Timeline.DateTime.parseGregorianDateTime("<%= @source.earliest_event.start.to_s %>");
+            detailed_theme.timeline_stop  = Timeline.DateTime.parseGregorianDateTime("<%= (@source.earliest_event.start + 1.week).to_s %>");
             
-            var d = Timeline.DateTime.parseGregorianDateTime("<%= Time.now.to_s %>")
+            var overview_theme = Timeline.ClassicTheme.create();
+            overview_theme.showEventText = false;
+            overview_theme.trackHeight = 0.5;
+            overview_theme.trackGap = 0.2;
+            
+            
+            var d = Timeline.DateTime.parseGregorianDateTime("<%= Time.now.to_s %>");
             var bandInfos = [
               Timeline.createBandInfo({
                 eventSource:    eventSource1,
                 width:          "20%", 
-                theme:          theme1,
+                theme:          detailed_theme,
                 layout:         'overview',  // original, overview, detailed
                 intervalUnit:   Timeline.DateTime.WEEK, 
                 intervalPixels: 400
@@ -43,7 +49,7 @@
               Timeline.createBandInfo({
                 eventSource:    eventSource1,
                 width:          "20%", 
-                theme:          theme1,
+                theme:          detailed_theme,
                 layout:         'overview',  // original, overview, detailed
                 intervalUnit:   Timeline.DateTime.DAY, 
                 intervalPixels: 200
@@ -52,7 +58,7 @@
                 eventSource:    eventSource1,
                 date:           d,
                 width:          "70%", 
-                theme:          theme1,
+                theme:          detailed_theme,
                 layout:         'original',  // original, overview, detailed
                 intervalUnit:   Timeline.DateTime.HOUR, 
                 intervalPixels: 100
@@ -60,8 +66,10 @@
             ];
             bandInfos[0].syncWith = 2;
             bandInfos[0].highlight = true;
+            // bandInfos[0].eventPainter.setLayout(bandInfos[2].eventPainter.getLayout());
             bandInfos[1].syncWith = 2;
             bandInfos[1].highlight = true;
+            // bandInfos[1].eventPainter.setLayout(bandInfos[2].eventPainter.getLayout());
                                                             
             // create the Timeline
             tl = Timeline.create(tl_el, bandInfos, Timeline.HORIZONTAL);

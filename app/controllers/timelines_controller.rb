@@ -86,6 +86,8 @@ class TimelinesController < ApplicationController
   
   def timeline
     @timeline = Timeline.find(params[:id])
+    @source = @timeline.source
+    
     respond_to do |format|
       format.html # timeline.html.erb
     end

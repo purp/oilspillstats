@@ -41,11 +41,11 @@ production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: timelines_production
+  database: oilspillstats_production
+  host: mysql.oilspillstats.com
   pool: 5
-  username: root
-  password: 
-  socket: /tmp/mysql.sock
+  username: oss_user
+  password: spl@tt3r
 
 cucumber:
   <<: *test
