@@ -1,3 +1,6 @@
-vendor/gems/*/ext/**/*.{o,so}
+vendor/gems/*/ext/*/*.o
+vendor/gems/*/ext/*/*.so
+vendor/gems/*/ext/*/*.bundle
+vendor/gems/*/ext/*/*.log
 vendor/gems/*/lib/*/*.bundle
 
