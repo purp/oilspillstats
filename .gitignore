@@ -1,2 +1,3 @@
 vendor/gems/*/ext
+vendor/gems/*/lib/*/*.bundle
 
