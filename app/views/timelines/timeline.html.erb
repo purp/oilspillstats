@@ -28,7 +28,7 @@
                                      // Set autoWidth on the Timeline's first band's theme,
                                      // will affect all bands.
             detailed_theme.timeline_start = Timeline.DateTime.parseGregorianDateTime("<%= @source.earliest_event.start.to_s %>");
-            detailed_theme.timeline_stop  = Timeline.DateTime.parseGregorianDateTime("<%= (@source.earliest_event.start + 1.week).to_s %>");
+            detailed_theme.timeline_stop  = Timeline.DateTime.parseGregorianDateTime("<%= (@source.latest_event.start + 1.week).to_s %>");
             
             var overview_theme = Timeline.ClassicTheme.create();
             overview_theme.showEventText = false;
