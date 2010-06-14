@@ -1,0 +1,106 @@
+<head>
+   <!-- See http://developer.yahoo.com/yui/grids/ for info on the grid layout -->
+   <title>Gulf of Mexico Oil Spill Response Stats</title>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+   <!-- See http://developer.yahoo.com/yui/ for info on the reset, font and base css -->
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+   <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/base/base-min.css"> 
+
+   <!-- Load the Timeline library after reseting the fonts, etc -->
+   <script src="http://static.simile.mit.edu/timeline/api-2.3.0/timeline-api.js?bundle=true" type="text/javascript"></script>
+ 
+   <link rel="stylesheet" href="local_example.css" type="text/css">
+
+   <!-- Since we don't have our own server, we do something tricky and load our data here as if it were a library file -->
+   <script>
+        var timeline_data = {  // save as a global variable
+            'dateTimeFormat': 'iso8601',
+            'events' : <%= @timeline.to_json %>
+        }
+        var tl;
+        function onLoad() {
+            var tl_el = document.getElementById("tl");
+            var eventSource1 = new Timeline.DefaultEventSource();
+            
+            var theme1 = Timeline.ClassicTheme.create();
+            theme1.autoWidth = true; // Set the Timeline's "width" automatically.
+                                     // Set autoWidth on the Timeline's first band's theme,
+                                     // will affect all bands.
+            theme1.timeline_start = new Date(Date.UTC(2010, 3, 1));
+            theme1.timeline_stop  = new Date(Date.UTC(2012, 0, 1));
+            
+            var d = Timeline.DateTime.parseGregorianDateTime("<%= Time.now.to_s %>")
+            var bandInfos = [
+              Timeline.createBandInfo({
+                eventSource:    eventSource1,
+                width:          "20%", 
+                theme:          theme1,
+                layout:         'overview',  // original, overview, detailed
+                intervalUnit:   Timeline.DateTime.WEEK, 
+                intervalPixels: 400
+              }),
+              Timeline.createBandInfo({
+                eventSource:    eventSource1,
+                width:          "20%", 
+                theme:          theme1,
+                layout:         'overview',  // original, overview, detailed
+                intervalUnit:   Timeline.DateTime.DAY, 
+                intervalPixels: 200
+              }),
+              Timeline.createBandInfo({
+                eventSource:    eventSource1,
+                date:           d,
+                width:          "70%", 
+                theme:          theme1,
+                layout:         'original',  // original, overview, detailed
+                intervalUnit:   Timeline.DateTime.HOUR, 
+                intervalPixels: 100
+              })
+            ];
+            bandInfos[0].syncWith = 2;
+            bandInfos[0].highlight = true;
+            bandInfos[1].syncWith = 2;
+            bandInfos[1].highlight = true;
+                                                            
+            // create the Timeline
+            tl = Timeline.create(tl_el, bandInfos, Timeline.HORIZONTAL);
+            
+            var url = '.'; // The base url for image, icon and background image
+                           // references in the data
+            eventSource1.loadJSON(timeline_data, url); // The data was stored into the 
+                                                       // timeline_data variable.
+            tl.layout(); // display the Timeline
+        }
+        
+        var resizeTimerID = null;
+        function onResize() {
+            if (resizeTimerID == null) {
+                resizeTimerID = window.setTimeout(function() {
+                    resizeTimerID = null;
+                    tl.layout();
+                }, 500);
+            }
+        }
+   </script>
+
+</head>
+<body onload="onLoad();" onresize="onResize();">
+<div id="doc3" class="yui-t7">
+   <div id="hd" role="banner">
+     <h1>Gulf of Mexico Oil Spill Response Stats</h1>
+     <p>The statistics here are gathered from the <a href="http://www.deepwaterhorizonresponse.com/">official Deepwater Horizon Unified Command website</a>.</p>
+   </div>
+   <div id="bd" role="main">
+	   <div class="yui-g">
+	     <div id='tl'></div>
+	     <p>To move the Timeline: use the mouse scroll wheel, the arrow keys or grab and drag the Timeline.</p>
+	   </div>
+	 </div>
+   <div id="ft" role="contentinfo">
+     <p>Thanks to the <a href=''>Simile Timeline project</a> Timeline version <span id='tl_ver'></span></p>
+     <script>Timeline.writeVersion('tl_ver')</script> 
+   </div>
+</div>
+
+</body>

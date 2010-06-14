@@ -1,0 +1,44 @@
+<h1>Editing timeline_event</h1>
+
+<% form_for(@timeline_event) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :start %><br />
+    <%= f.datetime_select :start %>
+  </p>
+  <p>
+    <%= f.label :end %><br />
+    <%= f.datetime_select :end %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :image %><br />
+    <%= f.text_field :image %>
+  </p>
+  <p>
+    <%= f.label :link %><br />
+    <%= f.text_field :link %>
+  </p>
+  <p>
+    <%= f.label :hash %><br />
+    <%= f.text_field :hash %>
+  </p>
+  <p>
+    <%= f.label :timeline_id %><br />
+    <%= f.text_field :timeline_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @timeline_event %> |
+<%= link_to 'Back', timeline_events_path %>

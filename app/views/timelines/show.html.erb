@@ -1,0 +1,18 @@
+<p>
+  <b>Title:</b>
+  <%=h @timeline.title %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%=h @timeline.source %>
+</p>
+
+<p>
+  <b>Template:</b>
+  <%=h @timeline.template %>
+</p>
+
+
+<%= link_to 'Edit', edit_timeline_path(@timeline) %> |
+<%= link_to 'Back', timelines_path %>

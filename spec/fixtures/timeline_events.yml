@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  start: 2010-06-13 11:49:45
+  end: 2010-06-13 11:49:45
+  title: MyString
+  description: MyText
+  image: MyString
+  link: MyString
+  hash: MyString
+  timeline_id: 1
+
+two:
+  start: 2010-06-13 11:49:45
+  end: 2010-06-13 11:49:45
+  title: MyString
+  description: MyText
+  image: MyString
+  link: MyString
+  hash: MyString
+  timeline_id: 1
