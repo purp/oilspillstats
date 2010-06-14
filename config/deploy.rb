@@ -24,7 +24,7 @@ task :production do
   set :domain, 'oilspillstats.com'
   role :app, "oilspillstats.com"
   role :web, "oilspillstats.com"
-  role :db,  "oilspillstats.com", :no_release => true, :primary => true
+  role :db,  "mysql.oilspillstats.com", :no_release => true, :primary => true
   
   namespace :deploy do
     desc "Restarting mod_rails with restart.txt"
