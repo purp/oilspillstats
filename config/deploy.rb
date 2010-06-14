@@ -1,22 +1,40 @@
-set :application, "set your application name here"
-set :repository,  "set your repository location here"
+set :application, "oilspillstats"
+set :repository,  "git@github.com:purp/oilspillstats.git"
 
-set :scm, :subversion
-# Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
+# If you aren't deploying to /u/apps/#{application} on the target
+# servers (which is the default), you can specify the actual location
+# via the :deploy_to variable:
+# set :deploy_to, "/var/www/#{application}"
+set :deploy_to, "/home/oilspillstats/oilspillstats.com"
+default_run_options[:pty] = true
 
-role :web, "your web-server here"                          # Your HTTP server, Apache/etc
-role :app, "your app-server here"                          # This may be the same as your `Web` server
-role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
-role :db,  "your slave db-server here"
 
-# If you are using Passenger mod_rails uncomment this:
-# if you're still using the script/reapear helper you will need
-# these http://github.com/rails/irs_process_scripts
+# If you aren't using Subversion to manage your source code, specify
+# your SCM below:
+# set :scm, :subversion
+set :scm, "git"
+set :git_enable_submodules, true
+set :deploy_via, :remote_cache
+set :ssh_options, {:forward_agent => true}
 
-# namespace :deploy do
-#   task :start do ; end
-#   task :stop do ; end
-#   task :restart, :roles => :app, :except => { :no_release => true } do
-#     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-#   end
-# end
+
+task :production do
+  set :deployment, 'production'
+  set :branch, 'master'
+  set :domain, 'oilspillstats.com'
+  role :app, "oilspillstats.com"
+  role :web, "oilspillstats.com"
+  role :db,  "oilspillstats.com", :no_release => true, :primary => true
+  
+  namespace :deploy do
+    desc "Restarting mod_rails with restart.txt"
+    task :restart, :roles => :app, :except => { :no_release => true } do
+      run "touch #{current_path}/tmp/restart.txt"
+    end
+
+    [:start, :stop].each do |t|
+      desc "#{t} task is a no-op with mod_rails"
+      task t, :roles => :app do ; end
+    end
+  end
+end
