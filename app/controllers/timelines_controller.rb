@@ -85,7 +85,7 @@ class TimelinesController < ApplicationController
   end
   
   def timeline
-    @timeline = Timeline.find(params[:id])
+    @timeline = params[:id] ? Timeline.find(params[:id]) : Timeline.first
     @source = @timeline.source
     
     respond_to do |format|
