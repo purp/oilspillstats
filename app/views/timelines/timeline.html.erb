@@ -97,7 +97,7 @@
 <div id="doc3" class="yui-t7">
    <div id="hd" role="banner">
      <h1>Gulf of Mexico Oil Spill Response Stats</h1>
-     <p>The statistics here are gathered from the <a href="http://www.deepwaterhorizonresponse.com/">official Deepwater Horizon Unified Command website</a>.</p>
+     <p>It's been <strong><%= (Date.today - Date.parse("2010-04-20T22:00:00-0500")).to_i %> days</strong> since the <a href="http://en.wikipedia.org/wiki/Deepwater_Horizon_drilling_rig_explosion">explosion and fire on the MDOU Deepwater Horizon</a> which occurred late on Tuesday, April 20, 2010, in the Gulf of Mexico.
    </div>
    <div id="bd" role="main">
 	   <div class="yui-g">
@@ -106,6 +106,7 @@
 	   </div>
 	 </div>
    <div id="ft" role="contentinfo">
+     <p>The statistics here are gathered from the <a href="http://www.deepwaterhorizonresponse.com/">official Deepwater Horizon Unified Command website</a>.</p>
      <p>Thanks to the <a href=''>Simile Timeline project</a> Timeline version <span id='tl_ver'></span></p>
      <script>Timeline.writeVersion('tl_ver')</script> 
    </div>

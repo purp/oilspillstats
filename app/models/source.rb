@@ -85,9 +85,11 @@ class Source < ActiveRecord::Base
   
   def refresh!
     if Time.now - updated_at >= 5.minutes
+      # Change updated_at first to avoid race condition where many pageviews 
+      # result in many full scans of source site
+      update_attribute(:updated_at, Time.now)
       get_source_urls_from_top_page
       source_pages.each {|page| create_new_timeline_events_from_page(page)}
-      update_attribute(:updated_at, Time.now)
     end
   end
 end
