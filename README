@@ -1,5 +1,7 @@
 TODO:
+* Scrolling bug in FF/Safari.
 * Fix gem building after deploy
+* Add proper ordering to Source#timeline_events
 * Collect better description of "Ongoing Administration-wide Response" events
 ** Grab first sentences of past 24 hours section
 * Timezones in timeline are GMT; they should be CDT
@@ -15,4 +17,6 @@ TODO:
 * Collect consolidated fish and wildlife stats from http://www.deepwaterhorizonresponse.com/go/doctype/2931/55963
 * Figure out how to use XSLT transforms on sources
 
-Source.first.timeline_events.reject {|e| !e.title.match(/ongoing administration-wide response/i)}
+
+Source.first.timeline_events.reject {|e| !e.title.match(/ongoing administration-wide response/i)}.sort {|a,b| a.start <=> b.start}
+d1.search("//div[@id='content']/p | //div[@id='content']//li")
