@@ -37,4 +37,11 @@ task :production do
       task t, :roles => :app do ; end
     end
   end
+  
+  desc "Force a gem rebuild"
+  task :rebuild_gems, :roles => :app, :except => { :no_release => true } do
+    run "rake gems:build:force"
+  end
+
+  after "deploy:update_code", :rebuild_gems
 end

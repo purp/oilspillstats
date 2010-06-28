@@ -38,14 +38,6 @@ class Source < ActiveRecord::Base
     chronological_order == 'forward'
   end
   
-  def earliest_event
-    timeline_events.sort {|a,b| a.start <=> b.start}.first
-  end
-  
-  def latest_event
-    timeline_events.sort {|a,b| b.start <=> a.start}.first
-  end
-  
   def get_source_urls_from_top_page
     max_page = top_page.search('//div[@class="pager"]/a')[-2].text.to_i
     (1..max_page - 1).each do |page_num|

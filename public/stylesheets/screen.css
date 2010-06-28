@@ -1,0 +1,38 @@
+#hd {
+  text-align:justify;
+  letter-spacing:1.25em;
+  white-space:nowrap;
+  color:#ccc;
+  font-family:Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-family:Helvetica, Arial, sans-serif;
+}
+
+.big_stat {
+  font-size:2em;
+  font-weight:bold;
+}
+
+.caption {
+  font-size:9px;
+}
+
+#ft {
+  font-size:9px;
+}
+
+table {
+  border: none;
+}
+
+td {
+  border: none;
+  vertical-align: top;
+}
+
+ul.stats li {
+	list-style: none;
+  text-indent: -1em;
+}

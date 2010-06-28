@@ -1,22 +1,21 @@
 TODO:
-* Scrolling bug in FF/Safari.
-* Fix gem building after deploy
-* Add proper ordering to Source#timeline_events
 * Collect better description of "Ongoing Administration-wide Response" events
 ** Grab first sentences of past 24 hours section
 * Timezones in timeline are GMT; they should be CDT
 * Incorporate transcripts/documents section (http://www.deepwaterhorizonresponse.com/go/doctype/2931/54095/)
-* Make updates from site asynchronous
 * Push PDFs to Scribd
 * Clean up and style to something readable
 ** fix apostrophe/unicode
-** Look at other themes
 ** clean up the PDF icons
 ** hot zones? http://simile.mit.edu/wiki/How_to_Create_Timelines
 * Collect Operations and Ongoing ... stats from http://www.deepwaterhorizonresponse.com/go/doctype/2931/53339/
 * Collect consolidated fish and wildlife stats from http://www.deepwaterhorizonresponse.com/go/doctype/2931/55963
 * Figure out how to use XSLT transforms on sources
 
+* Add http://www.whitehouse.gov/blog/issues/Deepwater-BP-Oil-Spill as source
+** ignore ongoing ... as they're grabbed from original
+* Pull images from the flickr feed - http://www.flickr.com/photos/deepwaterhorizonresponse
+* BP and/or Deepwaterhorizon Twitter feeds - http://twitter.com/oil_spill_2010
 
 Source.first.timeline_events.reject {|e| !e.title.match(/ongoing administration-wide response/i)}.sort {|a,b| a.start <=> b.start}
 d1.search("//div[@id='content']/p | //div[@id='content']//li")

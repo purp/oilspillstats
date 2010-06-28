@@ -3,7 +3,7 @@
 <html>
 <head>
    <!-- See http://developer.yahoo.com/yui/grids/ for info on the grid layout -->
-   <title>Local Timeline Example</title>
+   <title>Gulf of Mexico Oil Spill Response Stats</title>
    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 
    <!-- See http://developer.yahoo.com/yui/ for info on the reset, font and base css -->
@@ -13,69 +13,62 @@
    <!-- Load the Timeline library after reseting the fonts, etc -->
    <script src="http://static.simile.mit.edu/timeline/api-2.3.0/timeline-api.js?bundle=true" type="text/javascript"></script>
  
-   <link rel="stylesheet" href="local_example.css" type="text/css">
-
    <!-- Since we don't have our own server, we do something tricky and load our data here as if it were a library file -->
    <script src="javascripts/timeline_data.js" type="text/javascript"></script>
+
+   <link rel="stylesheet" href="stylesheets/screen.css" type="text/css">
 
    <script>        
         var tl;
         function onLoad() {
+            var today = new Date ();
             var tl_el = document.getElementById("tl");
             var eventSource1 = new Timeline.DefaultEventSource();
             
-            var theme1 = Timeline.ClassicTheme.create();
-            theme1.autoWidth = true; // Set the Timeline's "width" automatically.
+            var detailed_theme = Timeline.ClassicTheme.create();
+            detailed_theme.autoWidth = true; // Set the Timeline's "width" automatically.
                                      // Set autoWidth on the Timeline's first band's theme,
                                      // will affect all bands.
-            theme1.timeline_start = new Date(Date.UTC(2010, 3, 1));
-            theme1.timeline_stop  = new Date(Date.UTC(2012, 0, 1));
+            detailed_theme.timeline_start = tl_start;
+            detailed_theme.timeline_stop = tl_end;
             
-            var d = Timeline.DateTime.parseGregorianDateTime("2010")
-            var bandInfos = [
-                Timeline.createBandInfo({
-                    width:          45, // set to a minimum, autoWidth will then adjust
-                    intervalUnit:   Timeline.DateTime.DECADE, 
-                    intervalPixels: 200,
-                    eventSource:    eventSource1,
-                    date:           d,
-                    theme:          theme1,
-                    layout:         'original'  // original, overview, detailed
-                })
-            ];
+            // var d = Timeline.DateTime.parseGregorianDateTime("2010");
             var bandInfos = [
               Timeline.createBandInfo({
                 eventSource:    eventSource1,
-                date:           "Apr 21 2010 00:00:00 GMT",
-                width:          "70%", 
-                theme:          theme1,
+                date:           last_event_time,
+                width:          "600%", 
+                theme:          detailed_theme,
                 layout:         'original',  // original, overview, detailed
-                intervalUnit:   Timeline.DateTime.DAY, 
+                timeZone:       -6, 
+                intervalUnit:   Timeline.DateTime.HOUR, 
                 intervalPixels: 100
               }),
               Timeline.createBandInfo({
                 eventSource:    eventSource1,
-                date:           "Apr 21 2010 00:00:00 GMT",
                 width:          "20%", 
-                theme:          theme1,
-                layout:         'original',  // original, overview, detailed
-                intervalUnit:   Timeline.DateTime.WEEK, 
+                theme:          detailed_theme,
+                layout:         'overview',  // original, overview, detailed
+                timeZone:       -6, 
+                intervalUnit:   Timeline.DateTime.DAY, 
                 intervalPixels: 200
               }),
               Timeline.createBandInfo({
                 eventSource:    eventSource1,
-                date:           "Apr 21 2010 00:00:00 GMT",
-                width:          "10%", 
-                theme:          theme1,
-                layout:         'original',  // original, overview, detailed
-                intervalUnit:   Timeline.DateTime.MONTH, 
-                intervalPixels: 500
+                width:          "20%", 
+                theme:          detailed_theme,
+                layout:         'overview',  // original, overview, detailed
+                timeZone:       -6, 
+                intervalUnit:   Timeline.DateTime.WEEK, 
+                intervalPixels: 400
               })
             ];
-            bandInfos[1].syncWith = 0;
-            bandInfos[1].highlight = true;
             bandInfos[2].syncWith = 0;
             bandInfos[2].highlight = true;
+            // bandInfos[0].eventPainter.setLayout(bandInfos[2].eventPainter.getLayout());
+            bandInfos[1].syncWith = 0;
+            bandInfos[1].highlight = true;
+            // bandInfos[1].eventPainter.setLayout(bandInfos[2].eventPainter.getLayout());
                                                             
             // create the Timeline
             tl = Timeline.create(tl_el, bandInfos, Timeline.HORIZONTAL);
@@ -97,26 +90,50 @@
             }
         }
    </script>
+   <script type="text/javascript">
 
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-16980180-1']);
+     _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+   </script>
 </head>
 <body onload="onLoad();" onresize="onResize();">
-<div id="doc3" class="yui-t7">
-   <div id="hd" role="banner">
-     <h1>Local Timeline Example</h1>
-     <p>This example reads a local data file from the disk and displays it using the Simile Timeline library. The software library is retrieved from servers via the Internet.</p>
-     <p>The Timeline will grow automatically to fit the events. Scroll towards 2030 to see it grow. Click on an event to see its details.</p>
-   </div>
-   <div id="bd" role="main">
-	   <div class="yui-g">
-	     <div id='tl'></div>
-	     <p>To move the Timeline: use the mouse scroll wheel, the arrow keys or grab and drag the Timeline.</p>
-	   </div>
-	 </div>
-   <div id="ft" role="contentinfo">
-     <p>Thanks to the <a href=''>Simile Timeline project</a> Timeline version <span id='tl_ver'></span></p>
-     <script>Timeline.writeVersion('tl_ver')</script> 
-   </div>
-</div>
+  <div id="doc3" class="yui-t7">
+    <div id="hd" role="banner">
+      <h1 id="page_banner">gulf of mexico <span style="color:#666">oil spill response</span></h1>
+    </div>
+    <table style="border-style:none;">
+      <tr>
+        <td width="450">
+          <div id="map">
+            <a target = "_blank" href="http://gomex.erma.noaa.gov/erma.html#x=-87.96204&y=29.33909&z=8&layers=497+4891+4809+4880"><img src="images/map.half.png" alt="Map of the Gulf of Mexico with NESDIS Experimental Marine Pollution Surveillance Daily Composite and Shoreline Cleanup Assesment Technique (SCAT) overlays for 26 Jun 2010"/></a><br/>
+            <span class="caption" style="white-space:nowrap;">Snapshot of shoreline cleanup and marine pollution as of 26 Jun 2010 from <a href="http://GeoPlatform.gov/gulfresponse">GeoPlatform.gov/gulfresponse</a></span>
+          </div>
+        </td><td>
+          <ul class="stats">
+            <li><span class="big_stat"><script>document.write(elapsed_days)</script> days</span><br/> since the <a href="http://en.wikipedia.org/wiki/Deepwater_Horizon_drilling_rig_explosion">explosion and fire on the MODU Deepwater Horizon</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td colspan=2>
+          <div id="bd" role="main">
+            <div class="yui-g">
+              <div id='tl'></div>
+              <p class="caption"> Source: <a target="_blank" href="http://www.deepwaterhorizonresponse.com/">Deepwater Horizon Unified Command website</a>. To move the Timeline: use the mouse scroll wheel, the arrow keys or grab and drag the Timeline. Created using <a target="_blank" href='http://www.simile-widgets.org/timeline'>Simile Timeline</a>.</p>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
 
 </body>
 </html>
