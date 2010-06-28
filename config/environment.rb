@@ -24,6 +24,7 @@ Rails::Initializer.run do |config|
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem 'nokogiri'
   config.gem 'json_pure', :lib => 'json'
+  config.gem 'mime-types'
   config.gem 'rscribd'
 
   # Only load the plugins named here, in the order given (default is alphabetical).

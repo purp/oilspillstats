@@ -40,7 +40,7 @@ task :production do
   
   desc "Force a gem rebuild"
   task :rebuild_gems, :roles => :app, :except => { :no_release => true } do
-    run "rake gems:build:force"
+    run "cd #{latest_release} && rake gems:build:force"
   end
 
   after "deploy:update_code", :rebuild_gems

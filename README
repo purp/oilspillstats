@@ -16,6 +16,8 @@ TODO:
 ** ignore ongoing ... as they're grabbed from original
 * Pull images from the flickr feed - http://www.flickr.com/photos/deepwaterhorizonresponse
 * BP and/or Deepwaterhorizon Twitter feeds - http://twitter.com/oil_spill_2010
+* Incorporate http://paulrademacher.com/oilspill/ and/or http://www.ifitwasmyhome.com/
+
 
 Source.first.timeline_events.reject {|e| !e.title.match(/ongoing administration-wide response/i)}.sort {|a,b| a.start <=> b.start}
 d1.search("//div[@id='content']/p | //div[@id='content']//li")
