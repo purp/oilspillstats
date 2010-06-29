@@ -2,21 +2,36 @@ TODO:
 * Collect better description of "Ongoing Administration-wide Response" events
 ** Grab first sentences of past 24 hours section
 * Timezones in timeline are GMT; they should be CDT
-* Incorporate transcripts/documents section (http://www.deepwaterhorizonresponse.com/go/doctype/2931/54095/)
-* Push PDFs to Scribd
+* Make toggleable layers of sources
+* Generate an RSS feed of events according to selected layers (feedburner)
 * Clean up and style to something readable
 ** fix apostrophe/unicode
 ** clean up the PDF icons
 ** hot zones? http://simile.mit.edu/wiki/How_to_Create_Timelines
-* Collect Operations and Ongoing ... stats from http://www.deepwaterhorizonresponse.com/go/doctype/2931/53339/
-* Collect consolidated fish and wildlife stats from http://www.deepwaterhorizonresponse.com/go/doctype/2931/55963
+* Push PDFs to Scribd
 * Figure out how to use XSLT transforms on sources
+* Incorporate http://paulrademacher.com/oilspill/ and/or http://www.ifitwasmyhome.com/
+* Submit an article feature: people can submit URL for a new event on the timeline
+* Event flagging: ppl can vote them down
+* Admin panel: make it easy to see new events, add other, etc.
+* iPhone/iPad/Android view
+* Work to own SEO on "oil spill stats" and "oil spill statistics"
 
+
+New Sources:
+* response vessel list: http://vislab-ccom.unh.edu/~schwehr/nais-georss.xml 
+* Incorporate transcripts/documents section (http://www.deepwaterhorizonresponse.com/go/doctype/2931/54095/)
 * Add http://www.whitehouse.gov/blog/issues/Deepwater-BP-Oil-Spill as source
 ** ignore ongoing ... as they're grabbed from original
 * Pull images from the flickr feed - http://www.flickr.com/photos/deepwaterhorizonresponse
 * BP and/or Deepwaterhorizon Twitter feeds - http://twitter.com/oil_spill_2010
-* Incorporate http://paulrademacher.com/oilspill/ and/or http://www.ifitwasmyhome.com/
+* Collect Operations and Ongoing ... stats from http://www.deepwaterhorizonresponse.com/go/doctype/2931/53339/ (PDF)
+* Collect consolidated fish and wildlife stats from http://www.deepwaterhorizonresponse.com/go/doctype/2931/55963 (PDF)
+
+Interesting Articles:
+http://www.google.com/hostednews/ap/article/ALeqM5ib4SzkiGdVndXgDV6YPkLX7-AdtAD9GK4OEG2
+http://www.thedailygreen.com/environmental-news/latest/gulf-of-mexico-oil-spill-facts
+http://www.businessweek.com/news/2010-06-16/bp-gulf-well-gushing-as-much-as-60-000-barrels-a-day-update3-.html
 
 
 Source.first.timeline_events.reject {|e| !e.title.match(/ongoing administration-wide response/i)}.sort {|a,b| a.start <=> b.start}
