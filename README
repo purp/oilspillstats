@@ -2,6 +2,7 @@ TODO:
 * Collect better description of "Ongoing Administration-wide Response" events
 ** Grab first sentences of past 24 hours section
 * Timezones in timeline are GMT; they should be CDT
+* Stabilize width of hourly timeband to max size
 * Make toggleable layers of sources
 * Generate an RSS feed of events according to selected layers (feedburner)
 * Clean up and style to something readable
