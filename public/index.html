@@ -42,16 +42,7 @@
                 layout:         'original',  // original, overview, detailed
                 timeZone:       -6, 
                 intervalUnit:   Timeline.DateTime.HOUR, 
-                intervalPixels: 100
-              }),
-              Timeline.createBandInfo({
-                eventSource:    eventSource1,
-                width:          "20%", 
-                theme:          detailed_theme,
-                layout:         'overview',  // original, overview, detailed
-                timeZone:       -6, 
-                intervalUnit:   Timeline.DateTime.DAY, 
-                intervalPixels: 200
+                intervalPixels: 10
               }),
               Timeline.createBandInfo({
                 eventSource:    eventSource1,
@@ -60,6 +51,15 @@
                 layout:         'overview',  // original, overview, detailed
                 timeZone:       -6, 
                 intervalUnit:   Timeline.DateTime.WEEK, 
+                intervalPixels: 200
+              }),
+              Timeline.createBandInfo({
+                eventSource:    eventSource1,
+                width:          "20%", 
+                theme:          detailed_theme,
+                layout:         'overview',  // original, overview, detailed
+                timeZone:       -6, 
+                intervalUnit:   Timeline.DateTime.MONTH, 
                 intervalPixels: 400
               })
             ];

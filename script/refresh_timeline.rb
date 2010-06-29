@@ -1,7 +1,8 @@
 tl = Timeline.first
 tl.source.refresh!
 
-tl_data = open(File.join(Rails.root, 'public', 'javascripts', 'timeline_data.js'), 'w')
+outfile = Rails.root.parent.parent + 'shared' + 'timeline_data.js'
+tl_data = open(outfile, 'w')
 
 tl_data.write("
 var first_event_time = new Date(Date.parse(#{tl.start_time.to_simile}));

@@ -1,4 +1,5 @@
 log
+public/javascripts/timeline_data.js
 vendor/gems/*/ext/*/*.o
 vendor/gems/*/ext/*/*.so
 vendor/gems/*/ext/*/*.bundle
