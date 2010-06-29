@@ -40,7 +40,7 @@ task :production do
   
   desc "Force a gem rebuild"
   task :post_deploy_chores, :roles => :app, :except => { :no_release => true } do
-    run "cd #{latest_release} && rake rebuild:gems:force && rake link_timeline_data"
+    run "cd #{latest_release} && rake gems:build:force && rake link_timeline_data"
   end
 
   after "deploy:update_code", :post_deploy_chores
