@@ -96,8 +96,8 @@ STATIC_LIB =
 
 BINDIR        = $(bindir)
 RUBYCOMMONDIR = $(sitedir)$(target_prefix)
-RUBYLIBDIR = /Users/purp/work/timelines/vendor/gems/nokogiri-1.4.1/lib$(target_prefix)
-RUBYARCHDIR = /Users/purp/work/timelines/vendor/gems/nokogiri-1.4.1/lib$(target_prefix)
+RUBYLIBDIR = /Users/purp/work/oilspillstats/vendor/gems/nokogiri-1.4.1/lib$(target_prefix)
+RUBYARCHDIR = /Users/purp/work/oilspillstats/vendor/gems/nokogiri-1.4.1/lib$(target_prefix)
 
 TARGET_SO     = $(DLLIB)
 CLEANLIBS     = $(TARGET).bundle $(TARGET).il? $(TARGET).tds $(TARGET).map

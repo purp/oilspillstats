@@ -115,10 +115,10 @@ module Rails
       @spec = s
     end
 
-    def requirement
-      r = version_requirements
-      (r == Gem::Requirement.default) ? nil : r
-    end
+    # def requirement
+    #   r = version_requirements
+    #   (r == Gem::Requirement.default) ? nil : r
+    # end
 
     def built?
       return false unless frozen?
