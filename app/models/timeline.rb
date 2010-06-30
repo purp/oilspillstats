@@ -1,13 +1,13 @@
 class Timeline < ActiveRecord::Base
   has_one :source
-  has_many :timeline_events, :through => :source, :order => 'start ASC'
+  has_many :events, :through => :source, :order => 'start ASC'
   
   def start_time
-    timeline_events.first.start
+    events.first.start
   end
   
   def end_time
-    timeline_events.last.start
+    events.last.start
   end
   
   def duration(interval = 1.day)
@@ -15,6 +15,6 @@ class Timeline < ActiveRecord::Base
   end
   
   def to_json
-    timeline_events.map {|event| event.to_hash}.to_json
+    events.map {|event| event.to_hash}.to_json
   end
 end

@@ -4,7 +4,6 @@ describe Timeline do
   before(:each) do
     @valid_attributes = {
       :title => "value for title",
-      :source => "value for source",
       :template => "value for template"
     }
   end

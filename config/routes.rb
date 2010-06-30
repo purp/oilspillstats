@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  # map.resources :timeline_events
+  # map.resources :events
 
   # map.resources :timelines
   # map.connect 'timeline/:id', :controller => 'timelines', :action => 'timeline'
@@ -34,9 +34,14 @@ ActionController::Routing::Routes.draw do |map|
   #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
   #     admin.resources :products
   #   end
+  map.namespace :admin do |admin|
+    admin.resources :timelines
+    admin.resources :sources
+    admin.resources :events
+  end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  map.root :controller => "timelines", :action => 'timeline'
+  # map.root :controller => "timelines", :action => 'timeline'
 
   # See how all your routes lay out with "rake routes"
 

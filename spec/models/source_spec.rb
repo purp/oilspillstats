@@ -4,7 +4,8 @@ describe Source do
   before(:each) do
     @valid_attributes = {
       :url => "value for url",
-      :timeline_id => 1
+      :timeline_id => 1,
+      :chronological_order => 'reverse'
     }
   end
 

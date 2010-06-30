@@ -1,4 +1,4 @@
-class TimelineEvent < ActiveRecord::Base
+class Event < ActiveRecord::Base
   belongs_to :source
   
   validates_presence_of :link

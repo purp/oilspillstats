@@ -8,7 +8,7 @@ one:
   image: MyString
   link: MyString
   hash: MyString
-  timeline_id: 1
+  source_id: 1
 
 two:
   start: 2010-06-13 11:49:45
@@ -18,4 +18,4 @@ two:
   image: MyString
   link: MyString
   hash: MyString
-  timeline_id: 1
+  source_id: 1

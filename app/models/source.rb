@@ -1,6 +1,6 @@
 class Source < ActiveRecord::Base
   belongs_to :timeline
-  has_many :timeline_events
+  has_many :events
   
   validates_presence_of :timeline_id, :url, :chronological_order
   
@@ -46,10 +46,10 @@ class Source < ActiveRecord::Base
     end
   end
   
-  def create_new_timeline_events_from_page(page)
+  def create_new_events_from_page(page)
     page.search('//ul[@id="documentList"]/li').each do |node|
       event_url = base_url + node.at('./a')[:href]
-      event = TimelineEvent.find_or_initialize_by_link(event_url)
+      event = Event.find_or_initialize_by_link(event_url)
       next unless event.new_record?
 
       begin
@@ -81,7 +81,7 @@ class Source < ActiveRecord::Base
       # result in many full scans of source site
       update_attribute(:updated_at, Time.now)
       get_source_urls_from_top_page
-      source_pages.each {|page| create_new_timeline_events_from_page(page)}
+      source_pages.each {|page| create_new_events_from_page(page)}
     end
   end
 end

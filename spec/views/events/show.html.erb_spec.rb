@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe "/timeline_events/show.html.erb" do
-  include TimelineEventsHelper
+describe "/events/show.html.erb" do
+  include EventsHelper
   before(:each) do
-    assigns[:timeline_event] = @timeline_event = stub_model(TimelineEvent,
+    assigns[:event] = @event = stub_model(Event,
       :title => "value for title",
       :description => "value for description",
       :image => "value for image",

@@ -35,5 +35,5 @@ http://www.thedailygreen.com/environmental-news/latest/gulf-of-mexico-oil-spill-
 http://www.businessweek.com/news/2010-06-16/bp-gulf-well-gushing-as-much-as-60-000-barrels-a-day-update3-.html
 
 
-Source.first.timeline_events.reject {|e| !e.title.match(/ongoing administration-wide response/i)}.sort {|a,b| a.start <=> b.start}
+Source.first.events.reject {|e| !e.title.match(/ongoing administration-wide response/i)}.sort {|a,b| a.start <=> b.start}
 d1.search("//div[@id='content']/p | //div[@id='content']//li")

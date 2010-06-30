@@ -2,10 +2,8 @@
 
 one:
   title: MyString
-  source: MyString
   template: MyText
 
 two:
   title: MyString
-  source: MyString
   template: MyText

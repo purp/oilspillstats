@@ -1,6 +1,6 @@
-<h1>New timeline_event</h1>
+<h1>Editing event</h1>
 
-<% form_for(@timeline_event) do |f| %>
+<% form_for(@event) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -36,8 +36,9 @@
     <%= f.text_field :timeline_id %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Update' %>
   </p>
 <% end %>
 
-<%= link_to 'Back', timeline_events_path %>
+<%= link_to 'Show', @event %> |
+<%= link_to 'Back', events_path %>

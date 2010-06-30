@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe TimelineEvent do
+describe Event do
   before(:each) do
     @valid_attributes = {
       :start => Time.now,
@@ -9,12 +9,11 @@ describe TimelineEvent do
       :description => "value for description",
       :image => "value for image",
       :link => "value for link",
-      :hash => "value for hash",
-      :timeline_id => 1
+      :source_id => 1
     }
   end
 
   it "should create a new instance given valid attributes" do
-    TimelineEvent.create!(@valid_attributes)
+    Event.create!(@valid_attributes)
   end
 end

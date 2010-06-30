@@ -3,7 +3,9 @@
 one:
   url: MyString
   timeline_id: 1
+  chronological_order: reverse
 
 two:
   url: MyString
   timeline_id: 1
+  chronological_order: forward

@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20100614083532) do
     t.integer  "chronological_order"
   end
 
-  create_table "timeline_events", :force => true do |t|
+  create_table "events", :force => true do |t|
     t.datetime "start"
     t.datetime "end"
     t.string   "title"
