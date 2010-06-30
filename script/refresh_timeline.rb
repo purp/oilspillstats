@@ -1,7 +1,8 @@
 tl = Timeline.first
 tl.source.refresh!
 
-outfile = Rails.root.parent.parent + 'shared' + 'timeline_data.js'
+outdir = (Rails.env == 'production') ? Rails.root.parent.parent + 'shared' : Rails.root + 'public' + 'javascripts'
+outfile =  outdir + 'timeline_data.js'
 tl_data = open(outfile, 'w')
 
 tl_data.write("
