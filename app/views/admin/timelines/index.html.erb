@@ -12,13 +12,13 @@
     <td><%=h timeline.title %></td>
     <td><%=h timeline.source %></td>
     <td><%=h timeline.template %></td>
-    <td><%= link_to 'Show', timeline %></td>
-    <td><%= link_to 'Edit', edit_timeline_path(timeline) %></td>
-    <td><%= link_to 'Destroy', timeline, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', [:admin, timeline] %></td>
+    <td><%= link_to 'Edit', edit_admin_timeline_path(timeline) %></td>
+    <td><%= link_to 'Destroy', [:admin, timeline], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New timeline', new_timeline_path %>
+<%= link_to 'New timeline', new_admin_timeline_path %>

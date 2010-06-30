@@ -1,6 +1,8 @@
-class TimelinesController < ApplicationController
-  # GET /timelines
-  # GET /timelines.xml
+class Admin::TimelinesController < ApplicationController
+  layout "timelines"
+  
+  # GET /admin/timelines
+  # GET /admin/timelines.xml
   def index
     @timelines = Timeline.all
 
@@ -10,8 +12,8 @@ class TimelinesController < ApplicationController
     end
   end
 
-  # GET /timelines/1
-  # GET /timelines/1.xml
+  # GET /admin/timelines/1
+  # GET /admin/timelines/1.xml
   def show
     @timeline = Timeline.find(params[:id])
 
@@ -22,8 +24,8 @@ class TimelinesController < ApplicationController
     end
   end
 
-  # GET /timelines/new
-  # GET /timelines/new.xml
+  # GET /admin/timelines/new
+  # GET /admin/timelines/new.xml
   def new
     @timeline = Timeline.new
 
@@ -33,20 +35,20 @@ class TimelinesController < ApplicationController
     end
   end
 
-  # GET /timelines/1/edit
+  # GET /admin/timelines/1/edit
   def edit
     @timeline = Timeline.find(params[:id])
   end
 
-  # POST /timelines
-  # POST /timelines.xml
+  # POST /admin/timelines
+  # POST /admin/timelines.xml
   def create
     @timeline = Timeline.new(params[:timeline])
 
     respond_to do |format|
       if @timeline.save
         flash[:notice] = 'Timeline was successfully created.'
-        format.html { redirect_to(@timeline) }
+        format.html { redirect_to([:admin, @timeline]) }
         format.xml  { render :xml => @timeline, :status => :created, :location => @timeline }
       else
         format.html { render :action => "new" }
@@ -55,15 +57,15 @@ class TimelinesController < ApplicationController
     end
   end
 
-  # PUT /timelines/1
-  # PUT /timelines/1.xml
+  # PUT /admin/timelines/1
+  # PUT /admin/timelines/1.xml
   def update
     @timeline = Timeline.find(params[:id])
 
     respond_to do |format|
       if @timeline.update_attributes(params[:timeline])
         flash[:notice] = 'Timeline was successfully updated.'
-        format.html { redirect_to(@timeline) }
+        format.html { redirect_to([:admin, @timeline]) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -72,14 +74,14 @@ class TimelinesController < ApplicationController
     end
   end
 
-  # DELETE /timelines/1
-  # DELETE /timelines/1.xml
+  # DELETE /admin/timelines/1
+  # DELETE /admin/timelines/1.xml
   def destroy
     @timeline = Timeline.find(params[:id])
     @timeline.destroy
 
     respond_to do |format|
-      format.html { redirect_to(timelines_url) }
+      format.html { redirect_to(admin_timelines_url) }
       format.xml  { head :ok }
     end
   end

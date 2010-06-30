@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe "/timelines/edit.html.erb" do
-  include TimelinesHelper
+describe "/admin/timelines/edit.html.erb" do
+  include Admin::TimelinesHelper
 
   before(:each) do
     assigns[:timeline] = @timeline = stub_model(Timeline,
@@ -15,7 +15,7 @@ describe "/timelines/edit.html.erb" do
   it "renders the edit timeline form" do
     render
 
-    response.should have_tag("form[action=#{timeline_path(@timeline)}][method=post]") do
+    response.should have_tag("form[action=#{admin_timeline_path(@timeline)}][method=post]") do
       with_tag('input#timeline_title[name=?]', "timeline[title]")
       with_tag('input#timeline_source[name=?]', "timeline[source]")
       with_tag('textarea#timeline_template[name=?]', "timeline[template]")

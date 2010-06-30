@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe "/timelines/show.html.erb" do
-  include TimelinesHelper
+describe "/admin/timelines/show.html.erb" do
+  include Admin::TimelinesHelper
   before(:each) do
     assigns[:timeline] = @timeline = stub_model(Timeline,
       :title => "value for title",

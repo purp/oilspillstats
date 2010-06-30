@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe "/timelines/index.html.erb" do
-  include TimelinesHelper
+describe "/admin/timelines/index.html.erb" do
+  include Admin::TimelinesHelper
 
   before(:each) do
     assigns[:timelines] = [

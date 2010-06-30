@@ -1,6 +1,6 @@
-<h1>Editing timeline</h1>
+<h1>New timeline</h1>
 
-<% form_for(@timeline) do |f| %>
+<% form_for([:admin, @timeline]) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -16,9 +16,8 @@
     <%= f.text_area :template %>
   </p>
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit 'Create' %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @timeline %> |
-<%= link_to 'Back', timelines_path %>
+<%= link_to 'Back', admin_timelines_path %>

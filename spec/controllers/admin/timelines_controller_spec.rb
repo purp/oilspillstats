@@ -1,9 +1,14 @@
 require 'spec_helper'
 
-describe TimelinesController do
+describe Admin::TimelinesController do
 
   def mock_timeline(stubs={})
     @mock_timeline ||= mock_model(Timeline, stubs)
+  end
+
+  #Delete this example and add some real ones
+  it "should use Admin::TimelinesController" do
+    controller.should be_an_instance_of(Admin::TimelinesController)
   end
 
   describe "GET index" do
@@ -50,7 +55,7 @@ describe TimelinesController do
       it "redirects to the created timeline" do
         Timeline.stub!(:new).and_return(mock_timeline(:save => true))
         post :create, :timeline => {}
-        response.should redirect_to(timeline_url(mock_timeline))
+        response.should redirect_to(admin_timeline_url(mock_timeline))
       end
     end
 
@@ -88,7 +93,7 @@ describe TimelinesController do
       it "redirects to the timeline" do
         Timeline.stub!(:find).and_return(mock_timeline(:update_attributes => true))
         put :update, :id => "1"
-        response.should redirect_to(timeline_url(mock_timeline))
+        response.should redirect_to(admin_timeline_url(mock_timeline))
       end
     end
 
@@ -124,7 +129,7 @@ describe TimelinesController do
     it "redirects to the timelines list" do
       Timeline.stub!(:find).and_return(mock_timeline(:destroy => true))
       delete :destroy, :id => "1"
-      response.should redirect_to(timelines_url)
+      response.should redirect_to(admin_timelines_url)
     end
   end
 
