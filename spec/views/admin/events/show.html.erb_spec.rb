@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe "/events/show.html.erb" do
-  include EventsHelper
+describe "/admin/events/show.html.erb" do
+  include Admin::EventsHelper
   before(:each) do
     assigns[:event] = @event = stub_model(Event,
       :title => "value for title",

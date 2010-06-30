@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe "/events/index.html.erb" do
-  include EventsHelper
+describe "/admin/events/index.html.erb" do
+  include Admin::EventsHelper
 
   before(:each) do
     assigns[:events] = [

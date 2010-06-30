@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe EventsController do
+describe Admin::EventsController do
 
   def mock_event(stubs={})
     @mock_event ||= mock_model(Event, stubs)
@@ -50,7 +50,7 @@ describe EventsController do
       it "redirects to the created event" do
         Event.stub!(:new).and_return(mock_event(:save => true))
         post :create, :event => {}
-        response.should redirect_to(event_url(mock_event))
+        response.should redirect_to(admin_event_url(mock_event))
       end
     end
 
@@ -88,7 +88,7 @@ describe EventsController do
       it "redirects to the event" do
         Event.stub!(:find).and_return(mock_event(:update_attributes => true))
         put :update, :id => "1"
-        response.should redirect_to(event_url(mock_event))
+        response.should redirect_to(admin_event_url(mock_event))
       end
     end
 
@@ -124,7 +124,7 @@ describe EventsController do
     it "redirects to the events list" do
       Event.stub!(:find).and_return(mock_event(:destroy => true))
       delete :destroy, :id => "1"
-      response.should redirect_to(events_url)
+      response.should redirect_to(admin_events_url)
     end
   end
 

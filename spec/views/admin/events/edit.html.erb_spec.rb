@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe "/events/edit.html.erb" do
-  include EventsHelper
+describe "/admin/events/edit.html.erb" do
+  include Admin::EventsHelper
 
   before(:each) do
     assigns[:event] = @event = stub_model(Event,
@@ -18,7 +18,7 @@ describe "/events/edit.html.erb" do
   it "renders the edit event form" do
     render
 
-    response.should have_tag("form[action=#{event_path(@event)}][method=post]") do
+    response.should have_tag("form[action=#{admin_event_path(@event)}][method=post]") do
       with_tag('input#event_title[name=?]', "event[title]")
       with_tag('textarea#event_description[name=?]', "event[description]")
       with_tag('input#event_image[name=?]', "event[image]")
