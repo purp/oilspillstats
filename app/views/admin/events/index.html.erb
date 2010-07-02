@@ -1,27 +1,29 @@
 <h1>Listing events</h1>
 
+<%= link_to 'New event', new_admin_event_path %>
+
 <table>
   <tr>
     <th>Start</th>
-    <th>End</th>
+    <!-- <th>End</th> -->
     <th>Title</th>
-    <th>Description</th>
+    <!-- <th>Description</th> -->
     <th>Image</th>
-    <th>Link</th>
-    <th>Hash</th>
-    <th>Timeline</th>
+    <!-- <th>Link</th> -->
+    <th>Source</th>
+    <!-- <th>Icon</th> -->
   </tr>
 
 <% @events.each do |event| %>
   <tr>
-    <td><%=h event.start %></td>
-    <td><%=h event.end %></td>
-    <td><%=h event.title %></td>
-    <td><%=h event.description %></td>
+    <td><%=h event.start.to_s %></td>
+    <!-- <td><%=h event.end %></td> -->
+    <td><% if event.icon %><img src="<%= event.icon %>"/ alt="icon"> <% end %><%=h event.title.truncate(50) %></td>
+    <!-- <td><%=h event.description %></td> -->
     <td><%=h event.image %></td>
-    <td><%=h event.link %></td>
-    <td><%=h event.hash %></td>
-    <td><%=h event.timeline_id %></td>
+    <!-- <td><%=h event.link %></td> -->
+    <td><%=h event.source.name.truncate %></td>
+    <!-- <td><%=h event.icon %></td> -->
     <td><%= link_to 'Show', [:admin, event] %></td>
     <td><%= link_to 'Edit', edit_admin_event_path(event) %></td>
     <td><%= link_to 'Destroy', [:admin, event], :confirm => 'Are you sure?', :method => :delete %></td>
