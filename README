@@ -17,6 +17,7 @@ TODO:
 * Admin panel: make it easy to see new events, add other, etc.
 * iPhone/iPad/Android view
 * Work to own SEO on "oil spill stats" and "oil spill statistics"
+* Add a better datetime_select form helper
 
 
 New Sources:

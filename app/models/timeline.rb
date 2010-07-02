@@ -1,4 +1,4 @@
-class Timeline < ActiveRecord::Base
+class Timeline < ActiveRecord::Base  
   has_one :source
   has_many :events, :through => :source, :order => 'start ASC'
   
