@@ -1,4 +1,4 @@
-class EventsAreJustEvents < ActiveRecord::Migration
+class TimelineEventsAreJustEvents < ActiveRecord::Migration
   class Event < ActiveRecord::Base; end
   class Event < ActiveRecord::Base; end
   
