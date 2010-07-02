@@ -1,4 +1,5 @@
 class Admin::TimelinesController < ApplicationController
+  before_filter :authorize
   layout "timelines"
   
   # GET /admin/timelines

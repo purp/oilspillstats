@@ -1,8 +1,9 @@
 class Admin::EventsController < ApplicationController
+  before_filter :authorize
   # GET /events
   # GET /events.xml
   def index
-    @events = Event.all
+    @events = Event.all(:order => 'start DESC')
 
     respond_to do |format|
       format.html # index.html.erb
