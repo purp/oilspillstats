@@ -5,7 +5,7 @@ TODO:
 * Truncate long titles in timeline(?)
 * Fix // in urls
 * Normalize to link/url, name/title
-* Clean title and descriptions (strip HTML?)
+* Clean title and descriptions (strip HTML? Unicode/UTF-8 chars)
 * Timezones in timeline are GMT; they should be CDT
 * Stabilize width of hourly timeband to max size
 * Make toggleable layers of sources
@@ -13,7 +13,7 @@ TODO:
 * Clean up and style to something readable
 ** fix apostrophe/unicode
 ** clean up the PDF icons
-** hot zones? http://simile.mit.edu/wiki/How_to_Create_Timelines
+* Dynamically add hot zones to get rid of empty timeline space? http://simile.mit.edu/wiki/How_to_Create_Timelines
 * Push PDFs to Scribd
 * Figure out how to use XSLT transforms on sources
 * Incorporate http://paulrademacher.com/oilspill/ and/or http://www.ifitwasmyhome.com/
