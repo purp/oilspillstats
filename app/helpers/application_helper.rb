@@ -4,8 +4,9 @@ module ApplicationHelper
     record_type = record.class.to_s.downcase
     links = []
     # links << link_to(image_tag('mini-page_show.gif', :alt => 'show event'), [:admin, record])
-    links << link_to(image_tag('mini-page_edit.gif', :alt => 'edit event'), self.send("edit_admin_#{record_type}_path", record))
-    links << link_to(image_tag('mini-page_delete.gif', :alt => 'delete event'), [:admin, record], :confirm => 'Are you sure?', :method => :delete)
+    links << link_to(image_tag('mini-page_refresh.gif', :alt => "refresh #{record_type}"), [:refresh, :admin, record], :confirm => 'Are you sure?', :method => :put)
+    links << link_to(image_tag('mini-page_edit.gif', :alt => "edit #{record_type}"), [:edit, :admin, record])
+    links << link_to(image_tag('mini-page_delete.gif', :alt => "delete #{record_type}"), [:admin, record], :confirm => 'Are you sure?', :method => :delete)
     links << external_link_for(record)
     links.join(' ')
   end

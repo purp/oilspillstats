@@ -82,4 +82,17 @@ class Admin::EventsController < Admin::BaseController
       format.xml  { head :ok }
     end
   end
+  
+  # PUT /events/1/refresh
+  # PUT /events/1/refresh.xml
+  def refresh
+    @event = Event.find(params[:id])
+    @event.refresh!
+
+    respond_to do |format|
+      format.html { redirect_to(admin_event_path(@event)) }
+      format.xml  { head :ok }
+    end
+  end
+  
 end

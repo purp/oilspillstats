@@ -1,12 +1,4 @@
-<p>
-  <b>Start:</b>
-  <%=h @event.start %>
-</p>
-
-<p>
-  <b>End:</b>
-  <%=h @event.end %>
-</p>
+<h1>Event #<%= @event.id %></h1>
 
 <p>
   <b>Title:</b>
@@ -16,6 +8,16 @@
 <p>
   <b>Description:</b>
   <%=h @event.description %>
+</p>
+
+<p>
+  <b>Start:</b>
+  <%=h @event.start %>
+</p>
+
+<p>
+  <b>End:</b>
+  <%=h @event.end %>
 </p>
 
 <p>
@@ -38,6 +40,5 @@
   <%=h @event.source_id %>
 </p>
 
-
-<%= link_to 'Edit', edit_admin_event_path(@event) %> |
-<%= link_to 'Back', admin_events_path %>
+<%= actions_for(@event) %>
+<%= link_to 'Show All', admin_events_path %>

@@ -1,7 +1,7 @@
 MUST:
-* Add a better datetime_select form helper
 * Add refetch button in admin for events
 * Add refresh! button in admin for sources
+* Add a better datetime_select form helper
 * Clean title and descriptions (strip HTML? Unicode/UTF-8 chars)
 * Timezones in timeline are GMT; they should be CDT
 * Make toggleable layers of sources
