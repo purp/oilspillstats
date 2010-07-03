@@ -1,19 +1,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title><%= controller.controller_name.titlecase %>: <%= controller.action_name.titlecase %></title>
+  <!-- See http://developer.yahoo.com/yui/ for info on the reset, font and base css -->
+  <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/base/base-min.css"> 
   <%= stylesheet_link_tag 'screen' %>
 </head>
 <body>
+  <div id="doc3" class="yui-t7">
+    <div id="hd_admin" role="banner">
+      <h1 id="page_banner">gulf of mexico <span style="color:#666">oil spill response</span> <span style='color:#000'>admin</span></h1>
+    </div>
 
-<p style="color: green"><%= flash[:notice] %></p>
+    <p style="color: green"><%= flash[:notice] %></p>
 
-<div class="admin">
-<%= yield %>
+    <div class="admin">
+    <%= yield %>
+  </div>
 </div>
-
 </body>
 </html>
