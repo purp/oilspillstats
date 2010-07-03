@@ -10,7 +10,7 @@ class Source < ActiveRecord::Base
   end
   
   def base_url
-    link.match(/^(.*:\/\/[^\/]+\/)/).to_s
+    link.match(/^(.*:\/\/[^\/]+\/)/).to_s.chomp('/')
   end
   
   def top_page
