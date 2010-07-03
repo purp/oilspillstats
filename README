@@ -1,28 +1,29 @@
-TODO:
+MUST:
+* Add a better datetime_select form helper
 * Add refetch button in admin for events
 * Add refresh! button in admin for sources
-* Style bullet lists in timeline
-* Truncate long titles in timeline(?)
-* Fix // in urls
-* Normalize to link/url, name/title
 * Clean title and descriptions (strip HTML? Unicode/UTF-8 chars)
 * Timezones in timeline are GMT; they should be CDT
-* Stabilize width of hourly timeband to max size
 * Make toggleable layers of sources
-* Generate an RSS feed of events according to selected layers (feedburner)
-* Clean up and style to something readable
-** fix apostrophe/unicode
+* Handle unicode properly
+
+SHOULD:
+* Style timeline events
+** Left justify timeline events
+** Truncate long titles in timeline(?)
 ** clean up the PDF icons
+* Generate an RSS feed of events according to selected layers (feedburner)
 * Dynamically add hot zones to get rid of empty timeline space? http://simile.mit.edu/wiki/How_to_Create_Timelines
+
+COULD:
 * Push PDFs to Scribd
 * Figure out how to use XSLT transforms on sources
 * Incorporate http://paulrademacher.com/oilspill/ and/or http://www.ifitwasmyhome.com/
 * Submit an article feature: people can submit URL for a new event on the timeline
 * Event flagging: ppl can vote them down
-* Admin panel: make it easy to see new events, add other, etc.
 * iPhone/iPad/Android view
 * Work to own SEO on "oil spill stats" and "oil spill statistics"
-* Add a better datetime_select form helper
+* Stabilize width of hourly timeband to max size
 
 
 New Sources:
