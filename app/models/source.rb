@@ -65,18 +65,16 @@ class Source < ActiveRecord::Base
         end
         event.save!
       rescue Exception => e
-        raise "Broke while working on #{event_url}: #{e.inspect}"
+        Rails.logger.fatal "Broke while working on #{event_url}: #{e.inspect} #{event.inspect}"
       end
     end
   end
   
   def refresh!
-    if Time.now - updated_at >= 5.minutes
-      # Change updated_at first to avoid race condition where many pageviews 
-      # result in many full scans of source site
-      update_attribute(:updated_at, Time.now)
-      get_source_urls_from_top_page
-      source_pages.each {|page| create_new_events_from_page(page)}
-    end
+    # Change updated_at first to avoid race condition where many pageviews 
+    # result in many full scans of source site
+    update_attribute(:updated_at, Time.now)
+    get_source_urls_from_top_page
+    source_pages.each {|page| create_new_events_from_page(page)}
   end
 end
