@@ -1,7 +1,4 @@
-class Admin::TimelinesController < ApplicationController
-  before_filter :authorize
-  layout "timelines"
-  
+class Admin::TimelinesController < Admin::BaseController  
   # GET /admin/timelines
   # GET /admin/timelines.xml
   def index

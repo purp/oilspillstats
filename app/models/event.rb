@@ -9,4 +9,12 @@ class Event < ActiveRecord::Base
   def to_hash
     attributes.reject {|k,v| !TIMELINE_ATTRS.include?(k) || v.nil?}
   end
+  
+  def get_info_from_link
+    doc = Nokogiri::HTML(open(link))
+    start = Time.parse(doc.at('//div[@id="postDateBar"]').text)
+    doc.search('//div[@id="content"]/p').each do |para|
+      description << para.text
+    end
+  end
 end

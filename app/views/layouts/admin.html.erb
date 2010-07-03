@@ -4,14 +4,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Events: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
+  <title><%= controller.controller_name.titlecase %>: <%= controller.action_name.titlecase %></title>
+  <%= stylesheet_link_tag 'screen' %>
 </head>
 <body>
 
 <p style="color: green"><%= flash[:notice] %></p>
 
+<div class="admin">
 <%= yield %>
+</div>
 
 </body>
 </html>

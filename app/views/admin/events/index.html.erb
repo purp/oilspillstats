@@ -1,32 +1,22 @@
-<h1>Listing events</h1>
+<h1>Listing <%= @events.size %> events</h1>
 
 <%= link_to 'New event', new_admin_event_path %>
 
 <table>
   <tr>
-    <th>Start</th>
-    <!-- <th>End</th> -->
+    <th/>
     <th>Title</th>
-    <!-- <th>Description</th> -->
-    <th>Image</th>
-    <!-- <th>Link</th> -->
+    <th>Time</th>
     <th>Source</th>
-    <!-- <th>Icon</th> -->
   </tr>
 
 <% @events.each do |event| %>
   <tr>
+    <td><%= actions_for(event)%></td>
+    <td><%= internal_link_for(event, :length => 50) %> <%= icon_for(event) %></td>
     <td><%=h event.start.to_s %></td>
-    <!-- <td><%=h event.end %></td> -->
-    <td><% if event.icon %><img src="<%= event.icon %>"/ alt="icon"> <% end %><%=h event.title.truncate(50) %></td>
-    <!-- <td><%=h event.description %></td> -->
-    <td><%=h event.image %></td>
-    <!-- <td><%=h event.link %></td> -->
-    <td><%=h event.source.name.truncate %></td>
-    <!-- <td><%=h event.icon %></td> -->
-    <td><%= link_to 'Show', [:admin, event] %></td>
-    <td><%= link_to 'Edit', edit_admin_event_path(event) %></td>
-    <td><%= link_to 'Destroy', [:admin, event], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= internal_link_for(event.source, :length => 20) %></td>
+    
   </tr>
 <% end %>
 </table>

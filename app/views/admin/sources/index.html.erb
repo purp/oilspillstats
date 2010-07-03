@@ -9,7 +9,7 @@
 <% @timelines.each do |timeline| %>
   <tr>
     <td><%=h timeline.title %></td>
-    <td><%= link_to(h(timeline.source.name), admin_source_path(timeline.source)) %><%= external_link_for(timeline.source)%></td>
+    <td><%= link_to(h(timeline.source.name), admin_source_path(timeline.source)) %></td>
     <%= actions_for(timeline) %>
   </tr>
 <% end %>

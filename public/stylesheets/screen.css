@@ -36,3 +36,12 @@ ul.stats li {
 	list-style: none;
   text-indent: -1em;
 }
+
+.admin {
+  font-size: 12px;
+  padding: 3px;
+}
+
+a.admin {
+  text-decoration: none;
+}

@@ -55,19 +55,14 @@ class Source < ActiveRecord::Base
       begin
         event.source = self
         event.title = node.at('./a').text
+        event.title = event.title.titlecase if event.title.upcase == event.title
         event.description = ''
         event.start = Date.parse(node.at('./span[@class="postDate"]').text).strftime("%Y-%m-%dT00:00:00-05:00")
         if node.at("./div[@class='extraInfo']/img")
           event.icon = base_url + node.at("./div[@class='extraInfo']/img")[:src]
         else
-          doc = Nokogiri::HTML(open(event.link))
-          event.start = Time.parse(doc.at('//div[@id="postDateBar"]').text)
-          doc.search('//div[@id="content"]/p').each do |para|
-            break if event.description.size > 160
-            event.description += para.text
-          end
+          event.get_info_from_link
         end
-
         event.save!
       rescue Exception => e
         raise "Broke while working on #{event_url}: #{e.inspect}"

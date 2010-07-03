@@ -1,5 +1,4 @@
-class Admin::EventsController < ApplicationController
-  before_filter :authorize
+class Admin::EventsController < Admin::BaseController
   # GET /events
   # GET /events.xml
   def index

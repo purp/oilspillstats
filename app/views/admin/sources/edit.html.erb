@@ -1,0 +1,24 @@
+<h1>Editing timeline</h1>
+
+<% form_for([:admin, @timeline]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :source %><br />
+    <%= f.text_field :source %>
+  </p>
+  <p>
+    <%= f.label :template %><br />
+    <%= f.text_area :template %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', [:admin, @timeline] %> |
+<%= link_to 'Back', admin_timelines_path %>

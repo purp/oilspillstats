@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @source.name %>
+</p>
+
+<p>
+  <b>URL:</b>
+  <%=h @source.url %>
+</p>
+
+<p>
+  <b>Timeline:</b>
+  <%=h @source.timeline.title %>
+</p>
+
+<p>
+  <b>Chronological Order:</b>
+  <%=h @source.chronological_order %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_source_path(@source) %> |
+<%= link_to 'Back', admin_sources_path %>
