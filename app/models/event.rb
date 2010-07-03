@@ -10,11 +10,27 @@ class Event < ActiveRecord::Base
     attributes.reject {|k,v| !TIMELINE_ATTRS.include?(k) || v.nil?}
   end
   
+  def to_nokogiri
+    Nokogiri::HTML(open(link))
+  end
+  
   def get_info_from_link
-    doc = Nokogiri::HTML(open(link))
-    start = Time.parse(doc.at('//div[@id="postDateBar"]').text)
-    doc.search('//div[@id="content"]/p').each do |para|
-      description << para.text
+    doc = to_nokogiri
+    self.start = Time.parse(doc.at('//div[@id="postDateBar"]').text)
+    paras = doc.search('//div[@id="content"]/p')
+    if title && title.match(/ongoing administration-wide response/i)
+      paras = doc.search("//div[@id='content']/p/b/..").map(&:text)
+      first_item = paras.find_index {|para| para.match(/past 24 hours/i)} + 1
+      last_item = paras.find_index {|para| para.match(/by the numbers/i)} - 1
+      self.description = ['<ul>', paras[first_item..last_item].map{|para| "<li>#{para}</li>"}, "</ul>"].flatten.join("\n")
+    else
+      self.description = paras.map(&:text).join(' ').truncate(160)
     end
+  end
+  
+  protected
+  def before_save
+    self.title.convert_ms_encoded_chars!
+    self.description.convert_ms_encoded_chars!
   end
 end
