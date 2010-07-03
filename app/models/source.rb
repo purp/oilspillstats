@@ -2,19 +2,19 @@ class Source < ActiveRecord::Base
   belongs_to :timeline
   has_many :events
   
-  validates_presence_of :timeline_id, :url, :chronological_order
+  validates_presence_of :timeline_id, :link, :chronological_order
   
   def after_initialize
-    @source_page_info ||= {url => nil}
+    @source_page_info ||= {link => nil}
     chronological_order ||= 'reverse'
   end
   
   def base_url
-    url.match(/^(.*:\/\/[^\/]+\/)/).to_s
+    link.match(/^(.*:\/\/[^\/]+\/)/).to_s
   end
   
   def top_page
-    source_page(url)
+    source_page(link)
   end
   
   def source_page(src_url)
@@ -41,7 +41,7 @@ class Source < ActiveRecord::Base
   def get_source_urls_from_top_page
     max_page = top_page.search('//div[@class="pager"]/a')[-2].text.to_i
     (1..max_page - 1).each do |page_num|
-      src_url = url + "?offset=#{page_num * 10}"
+      src_url = link + "?offset=#{page_num * 10}"
       @source_page_info[src_url] ||= nil
     end
   end
