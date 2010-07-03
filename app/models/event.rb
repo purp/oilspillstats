@@ -27,10 +27,4 @@ class Event < ActiveRecord::Base
       self.description = paras.map(&:text).join(' ').truncate(160)
     end
   end
-  
-  protected
-  def before_save
-    self.title.convert_ms_encoded_chars!
-    self.description.convert_ms_encoded_chars!
-  end
 end
