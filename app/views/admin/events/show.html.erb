@@ -25,12 +25,7 @@
 
 <p>
   <b>Link:</b>
-  <%=h @event.link %>
-</p>
-
-<p>
-  <b>Hash:</b>
-  <%=h @event.hash %>
+  <%=h @event.link %> <%= external_link_for(@event) %>
 </p>
 
 <p>
